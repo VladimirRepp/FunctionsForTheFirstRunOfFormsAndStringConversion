@@ -39,3 +39,10 @@ System::String^ ConvertToString(std::string& os) {
 
 	return s;
 }
+
+/*
+Usage Example:
+System::String^ sysString = "string";
+std::string stdString = ConvertToString(sysString);	//converting from system to standard
+sysString = ConvertToString(stdString);			//converting from standard to system
+*/
