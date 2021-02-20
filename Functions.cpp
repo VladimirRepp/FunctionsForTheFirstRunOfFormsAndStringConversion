@@ -18,11 +18,11 @@ void main(array<String^>^ args) {
 using namespace System;
 
 //Function prototypes (for the header file -> .h)
-std::string ConvertToString(System::String^ s);		//ñonverting System::string ^ to std::string
-String^ ConvertToString(std::string& os);			//ñonverting std::string to System::string ^
+std::string ConvertToString(System::String^ s);		//converting System::string ^ to std::string
+String^ ConvertToString(std::string& os);		//converting std::string to System::string ^
 
 //Implementing functions (for the execution file -> .cpp)
-//Converting System::string ^ â std::string
+//Converting System::string ^ to std::string
 std::string ConvertToString(System::String^ s) {
 	using namespace Runtime::InteropServices;
 	const char* chars =
@@ -33,7 +33,7 @@ std::string ConvertToString(System::String^ s) {
 	return os;
 }
 
-//Converting std::string â System::string ^ 
+//Converting std::string to System::string ^ 
 System::String^ ConvertToString(std::string& os) {
 	System::String^ s = gcnew System::String(os.c_str());
 
